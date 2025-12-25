@@ -193,7 +193,7 @@
                 </div>
                 <p class="mt-6">Tuan/Puan,</p>
                 <div class="mt-2 inline-block">
-                    <p class="font-bold underline uppercase">PELANTIKAN JAWATANKUASA DALAM UNIT KOKURIKULUM 2026 SK SERI BANDI 2.</p>
+                    <p class="font-bold underline uppercase">PELANTIKAN JAWATANKUASA DALAM UNIT KOKURIKULUM 2026 SK SERI BANDI 2</p>
                 </div>
                 
                 <p class="mt-4 justify-text">Dengan segala hormatnya perkara di atas adalah dirujuk. Sukacita dimaklumkan bahawa tuan/puan telah dilantik sebagai :</p>
@@ -275,8 +275,10 @@
                 // 4. Isi Surat
                 doc.setFont("helvetica", "normal").text("Tuan/Puan,", leftM, 85);
                 doc.setFont("helvetica", "bold").setFontSize(11);
-                doc.text("PELANTIKAN JAWATANKUASA DALAM UNIT KOKURIKULUM 2026 SK SERI BANDI 2.", leftM, 93);
-                doc.setLineWidth(0.3).line(leftM, 94, leftM + 162, 94);
+                // Tajuk surat tanpa titik akhir
+                doc.text("PELANTIKAN JAWATANKUASA DALAM UNIT KOKURIKULUM 2026 SK SERI BANDI 2", leftM, 93);
+                // Garisan bawah yang dipendekkan (dari 162 ke 158 untuk padan tajuk baru)
+                doc.setLineWidth(0.3).line(leftM, 94, leftM + 158, 94);
 
                 doc.setFont("helvetica", "normal").setFontSize(10);
                 const p1 = "Dengan segala hormatnya perkara di atas adalah dirujuk. Sukacita dimaklumkan bahawa tuan/puan telah dilantik sebagai :";
